@@ -1,8 +1,13 @@
 import { basename } from 'node:path'
 import { defineConfig } from 'vitepress'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
-
-import { head, nav, sidebar } from './configs'
+import { zh_CN } from './configs/zh_CN'
+import { en_US } from './configs/i18n/en_US/en_US'
+import { lch } from './configs/i18n/zh-classical/zh_classical'
+import { search as zhSearch } from './configs/zh_CN'
+// import { search as enSearch } from './configs/i18n/en_US/en_US'
+import { search as lzhSearch } from './configs/i18n/zh-classical/zh_classical'
+import { head , socialLinks } from './configs'
 
 const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
@@ -11,71 +16,74 @@ export default defineConfig({
   base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
 
   lang: 'zh-CN',
-  title: 'MCJPG组织网站',
-  description: 'Minecraft服务器集体宣传组织 (MCJPG)-一个致力于Minecraft技术交流和服务器宣传的新兴组织',
+
+  locales: {
+    root: {
+      label: '中文',
+      lang: 'zh-Hans',
+      ...zh_CN
+    },
+    en: {
+      label: 'English',
+      lang: 'en_US',
+      ...en_US
+    },
+    lch: {
+      label: '文言',
+      lang: 'zh-classical',
+      ...lch
+    },
+  },
+
   head,
 
   lastUpdated: true,
   cleanUrls: true,
 
-  /* markdown 配置 */
+  // 站点地图
+  sitemap: {
+    hostname: 'https://mcjpg.org',
+  },
+
   markdown: {
     lineNumbers: true,
     image: {
       // 默认禁用图片懒加载
       lazyLoading: true
-    }
+    },
+    // 组件插入h1标题下
+    config: (md) => {
+      md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
+          let htmlResult = slf.renderToken(tokens, idx, options);
+          if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`; 
+          return htmlResult;
+      }
+    },
   },
+
 
   /* 主题配置 */
   themeConfig: {
-    i18nRouting: false,
-    siteTitle: 'MCJPG组织',
+    i18nRouting: true,
     logo: '/logo.png',
-
-    nav,
-    sidebar,
+    
+    socialLinks,
 
     /* 右侧大纲配置 */
-    outline: {
-      level: 'deep',
-      label: '页面导航',
-    },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/MineJPGcraft/' }],
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'VTCVHVPS1J',
+        apiKey: 'c3e9345ef8310ece1bb44e178fe36dbd',
+        indexName: 'mcjpg',
+        locales: {
+          ...zhSearch,
+          // ...enSearch,
+          ...lzhSearch,
 
-    footer: {
-      message: 'MCJPG服务器宣传组织',
-      copyright: 'Copyright © 2024-present <a href="https://mcjpg.org/">MCJPG</a>— —<a href="https://github.com/MineJPGcraft/MCJPG">网站的仓库</a>',
-    },
-
-    lastUpdated: {
-      text: '最后更新于',
-      formatOptions: {
-        dateStyle: 'short',
-        timeStyle: 'medium',
+        },
       },
-    },
-
-    docFooter: {
-      prev: '上一页',
-      next: '下一页',
-    },
-
-    returnToTopLabel: '回到顶部',
-    sidebarMenuLabel: '菜单',
-    darkModeSwitchLabel: '主题',
-    lightModeSwitchTitle: '切换到浅色模式',
-    darkModeSwitchTitle: '切换到深色模式',
-
-    /*** 自定义配置 ***/
-
-    comment: {
-      repo: 'ZhuYuxuan9302/MCJPG',
-      repoId: 'R_kgDOMmsvSA',
-      category: 'Announcements',
-      categoryId: 'DIC_kwDOMmsvSM4Ch7NT',
-      
     },
   },
 

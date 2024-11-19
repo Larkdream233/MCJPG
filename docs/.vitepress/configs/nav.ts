@@ -7,13 +7,15 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: '团队',
     link: '/structure/',
   },
+  { text: "组织专栏", link: '/press/' },
   { text: "MC导航", link: '/nav/' },
   {
     text: "社区服务",
               items: [
-                { text: "MCJPG论坛", link: "https://bbs.mcjpg.org/" },
-                { text: "社区图床", link: "https://image.mcjpg.org/" },
-                { text: "各服务状态监测", link: "https://status.mcjpg.org/" }
+                { text: "MCJPG 社区图床", link: "https://image.mcjpg.org/" },
+                { text: "Markdown 编辑器", link: "https://editor.mcjpg.org/" },
+                { text: "状态监测", link: "https://status.mcjpg.org/" },
+                { text: "状态监测(备用)", link: "https://bstatus.mcjpg.org/" },
               ]
   },
   {

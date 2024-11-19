@@ -36,6 +36,12 @@ const code = [
     title: '技术支持',
     desc: '基础的技术问题解决（雾），风梨团队创始人（），状态监测与机器人负责人',
   },
+  {
+    avatar: '/teammate/Ygbs.jpg',
+    name: 'Ygbs',
+    title: '后端技术开发',
+    desc: 'BugCraft 腐竹，目前还没做什么事情',
+  },
 ]
 
 const community = [
@@ -46,12 +52,6 @@ const community = [
     desc: '曙光生电服务器腐竹，唯一开学后有很多时间的人',
   },
   {
-    avatar: '/teammate/北🐟.jpg',
-    name: '深',
-    title: '论坛主',
-    desc: '社区论坛负责人，TuTuPixel服务器腐竹',
-  },
-  {
     avatar: '/teammate/WERTYUS11.jpg',
     name: 'WERTYUS11',
     title: '审核兼宣传',
@@ -60,7 +60,7 @@ const community = [
   {
     avatar: '/teammate/叫我董老实-元气TaskMgr.jpg',
     name: '叫我董老实-元气TaskMgr',
-    title: '见习社区管理',
+    title: '社区管理',
     desc: 'RBS生电服务器（暂未成为成员服）服主，国庆期间暂任见习社区管理。负责社区管理。啥都不会但啥都不精通（）',
     links: [
       { icon: {
@@ -93,15 +93,6 @@ const publicise = [
   }
 ]
 
-const guset = [
-  {
-    avatar: '/teammate/Ленинград.jpg',
-    name: 'Ленинград',
-    title: '技术支持',
-    desc: '原MSCPO副会长,在MCJPG组织创建初期提供了宝贵的意见与支持',
-  }
-]
-
 </script>
 
 <VPTeamPage>
@@ -129,13 +120,6 @@ const guset = [
     <template #lead>MCJPG 宣传部通过对组织和成员服的宣传，来让更多的人知道我们的行动</template>
     <template #members>
       <VPTeamMembers size="small" :members="publicise" />
-    </template>
-  </VPTeamPageSection>
-   <VPTeamPageSection>
-    <template #title>特别鸣谢</template>
-    <template #lead>他们虽然不直接参与 MCJPG 的活动,但也为组织作出了贡献,MCJPG 的建设离不开他们的支持</template>
-    <template #members>
-      <VPTeamMembers size="small" :members="guset" />
     </template>
   </VPTeamPageSection>
 

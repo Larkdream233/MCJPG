@@ -4,30 +4,54 @@ layoutClass: 'm-home-layout'
 
 hero:
   name: MCJPG
-  text: 集体宣传组织
+  text: 服务器交流组织
   tagline: 一个致力于Minecraft技术交流和服务器宣传的组织</br>无论你是玩家还是服主，这里都是优秀的交流社区
   image:
     src: /logo.png
     alt: MCJPG组织
   actions:
     - text: 加入社区群组
-      link: https://go.flweb.cn/qunmcwp
+      link: https://qm.qq.com/q/bAZle5ABzy
     - theme: sponsor
       text: 社区MC导航
       link: /nav/
+    - theme: sponsor
+      text: 组织专栏
+      link: /press/
 
 features:
   - icon:
+      src: /server_icons/mss.jpg
+    title: MSS
+    details: 版本：JE1.21.1 BE1.21.x </br>本服务器添加了粘液科技以解决原版生存过于休闲的问题(bushi)</br>添加了各种娱乐插件以丰富玩家互动</br>
+    link: https://qm.qq.com/q/S2cX3H6LWq
+    linkText: 点此加入QQ群
+   
+  - icon:
+      src: /server_icons/SiO2 SMP.png
+    title: 二氧化硅生存服务器
+    details: 版本：JAVA 1.21.X（BE互通）</br>本服主打高版本原版生存，支持生电</br>无/tpa,/home,箱子锁,商店插件</br>同时本服没有死亡不掉落，仅有死亡墓碑</br></br>离线可进，有白名单</br>IP进群获取</br>QQ群：902147486
+    link: https://mcsio2.cn
+    linkText: 快来加入我们！点击查看服务器官网！
+    
+  - icon:
+      src: /server_icons/MCRW.png
+    title: MCRW
+    details: 版本：基岩版 1.21.02（Java版进可以装个ViaFabricPlus） | 半生电服务器</br>服务器群：971422762</br>服务器装载的插件有USF无名氏插件、飞行插件、领地插件等</br>飞行开启方式：输入/fly即可</br>服务器配置低，人多的时候尽量不要过度跑图（</br>服务器升级CPU了服主会及时通知的！
+    link: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=6KRND0sSxtuSyKXvMLPJRk2jcw30tlee&authKey=6Qbcuj%2BiemjLVwKS2wczNUg0cAffX8C%2BK%2BDb%2FdcUWEsfnLmUkZaf8N%2FukjYMkyc%2B&noverify=0&group_code=971422762
+    linkText: 加入MCRW！
+    
+  - icon:
       src: /server_icons/BugCraft.png
     title: BugCraft
-    details: 这是一个 Java 和基岩互通生存服务器，兼容 Java 1.13 以上，基岩版 1.20.6 以上。</br>无需正版登录和审核，您可以直接加入游玩。
-    link: https://bugcraft.org
-    linkText: BugCraft 的官方网站。
+    details: BugCraft 是一个 Java 和基岩互通生存服务器（基于 1.21.1），推荐 Java 版本 1.18.2 - 1.21.1，基岩版 1.21.30 。</br>无需正版登录，仅基本粘液科技插件。
+    link: https://bugcraft.org/docs/bugcraft/mcjpg
+    linkText: 查看完整说明
 
   - icon:
       src: /server_icons/WindyRiver.png
     title: 风河 | WindyRiver
-    details: 版本：Java | 1.21-1.8 (生存子服版本不定期更新，当前核心版本1.20.4) (正盗版融合登录，正版仍享应得权益)</br>欢迎来到风河，一个大型综合性服务器！</br>玩法包括【生存|天坑乱斗|游艺街(小游戏合集)】</br>公会 生电 粘液科技 养老 语音聊天 资源维度 结婚 通行证 PVP 小游戏</br>我服有活跃的管理，时不时整活的腐竹和完善的服规及新手指引（5000多字的PDF为新手保驾护航）</br>放在家中的高性能永久物理服务器，i9-14900K+64G内存，为玩家的游玩体验保驾护航。</br>事不宜迟，快来加入风河吧~
+    details: 版本：Java | 1.21-1.8 (生存子服版本不定期更新，当前核心版本1.21) (正盗版融合登录，正版仍享应得权益)</br>欢迎来到风河，一个大型综合性服务器！</br>玩法包括【生存|天坑乱斗|游艺街(小游戏合集)】</br>公会 生电 粘液科技 养老 语音聊天 资源维度 结婚 通行证 PVP 小游戏</br>我服有活跃的管理，时不时整活的腐竹和完善的服规及新手指引（5000多字的PDF为新手保驾护航）</br>放在家中的高性能永久物理服务器，i9-14900K+64G内存，为玩家的游玩体验保驾护航。</br>事不宜迟，快来加入风河吧~
     link: https://qm.qq.com/q/VvtGhFSfkI
     linkText: 点击加入风河，畅享浩瀚星河！
 
@@ -207,13 +231,6 @@ features:
     linkText: 加入我们
 
   - icon:
-      src: /server_icons/tutu.jpg
-    title: TuTuPixel
-    details: 版本：Java 1.7-1.21.1</br>养老、生电或是PVP，选一个罢！
-    link: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=WDvfrnga6ufC1WWCw_VAM1ey2vjaDAKd&authKey=Ni4183L4UVNGnmY2j6IpUrOiae2TVQv4ArbAh%2FuQqTqfgdDmOV7TnFnmugQj6YT6&noverify=0&group_code=213216892
-    linkText: 点击进入QQ群蕉♂流
-
-  - icon:
       src: /server_icons/Craft233.png
     title: Craft233
     details: 版本：Java 1.20-1.21.1</br>Craft233，一个休闲养老摸鱼系的Minecraft小服务器，欢迎加入我们，同我们一起成长！
@@ -255,6 +272,27 @@ features:
     details: 版本：1.20.1 半生电服务器<br>服务器加载carpet等生电mod，纯原版端也可进入<br>游玩服务器无需正版账号<br>服务器采取审核制
     link: https://www.bilibili.com/video/BV1miebe6E2w
     linkText: 前往视频链接
+
+  - icon:
+      src: /server_icons/星月夜.jpg
+    title: 星月夜 Fantasystars
+    details: 版本:1.19.x——1.21.1（基岩可进） 可外置登录<br>称号系统/粘液科技/个人菜单/抽奖/箱子商店/手机互通/显示掉落物品/签到/圈地/拍卖行/每日委托/血月
+    link: https://qm.qq.com/q/NxdejmE50A
+    linkText: 进星月夜官方QQ群聊
+
+  - icon:
+      src: /server_icons/Oceannetwork.png
+    title: Ocean Network
+    details: 版本：JE1.8x-1.21.x | BE:最新<br>这是一个长期开放的原版纯净高版本生存服务器<br>保留了原汁原味的体验,仅有基础玩法经济等插件<br>我们保证不做影响平衡、破坏公平或偏袒其他玩家<br>无需担心服内出现OP滥用权限恶意破坏等恶劣行为
+    link: https://oceannetwork.top
+    linkText: 服务器官网
+
+  - icon:
+      src: /server_icons/寂梦神域.png
+    title: 寂梦神域
+    details: 版本:理论1.12.2-1.19.2（核心版本：1.19.2）<br>服务器基本玩法：四季生存，载具，家具，自然灾难，（小游戏），抽奖，宠物，精灵球，星露谷物语，更多玩法将会持续更新！（由于学业和人数问题，小游戏暂不开放）<br>特色：自定义内容丰富，玩家可完全自定义图片内容，生存不再枯燥。<br>目前服务器开放：生存世界，资源世界
+    link: https://qm.qq.com/q/q90fy2E39C
+    linkText: 欢迎新老玩家进服体验！
 ---
 
 <style>
